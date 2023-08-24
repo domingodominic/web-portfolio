@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="ICON.png" type="webp/x-icon" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="loaders">
+      <div class="loader">
+      <span class="loader-text">loading</span>
+      <span class="load"></span>
+    </div>
+  </div>
+    <div class="extra-loader">
+
+      <div class="owner-name">
+        <span class="D">D</span>
+        <span class="ooms">OOMS</span>
+      </div>
+    </div>
+
+   
+
+  
+    <button id="scroll-to-top"><i class="fa-solid fa-arrow-up" style="color: #dec92e;"></i></button>
+    <nav id="navbar">
+      <div class="moon">
+        <img src="moon-dark.png" class="moons" />
+      </div>
+      <label class="light-text">
+        </i>DOOMS</label>
+      <ul class="menus">
+        <li><a href="#home" class="light-white nav--list">Home</a></li>
+        <li><a href="#about" class="light-white nav--list">About</a></li>
+        <li><a href="#skills" class="light-white nav--list">Skills</a></li>
+        <li><a href="#project" class="light-white nav--list">Projects</a></li>
+        <li><a href="#contact" class="light-white nav--list">Contacts</a></li>
+      </ul>
+      <input type="checkbox" id="checkbox" />
+      <label for="checkbox" class="menu"
+        ><img src="menu.png" class="menu-btn"style="width: 30px; height: 30px"
+      /></label>
+    </nav>
+    <section class="home" id="home">
+      <div class="col-home-one">
+        <h1 class="light-text animate-left">
+          Nice to meet you! <br />
+          I'm Doms
+        </h1>
+        <p class="fade-in" id="title">
+         <span id="first-text">I am </span>
+         <span class="sec-text " id="sec-text"></span>
+        </p>
+        <button class="resume-btn scaleX">RESUME</button>
+      </div>
+      <div class="col-home-two animate-right">
+        <img src="my-profile.png" class="my-profile" />
+      </div>
+    </section>
+    <div id="about">
+      <div class="my-photo" data-aos="fade-up">
+        <img src="aboutme.jpg" alt="Personal Picture" />
+      </div>
+      <div class="my-personality" data-aos="fade-up">
+        <h1 style="text-align: center; color: #dec92e; line-height: 6rem">
+          ABOUT ME
+        </h1>
+
+        <p class="light-text">
+          Hola! I am Dominic. I love doing anything related to web development.
+          I am currently taking a Bachelor of Science in Information Technology
+          in the Philippines. I love developing. Let's develop together!
+        </p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          style="max-width: fit-content; position: relative"
+        >
+          <path
+            fill="#dec92e"
+            fill-opacity="1"
+            d="M0,192L12.6,186.7C25.3,181,51,171,76,165.3C101.1,160,126,160,152,181.3C176.8,203,202,245,227,234.7C252.6,224,278,160,303,149.3C328.4,139,354,181,379,170.7C404.2,160,429,96,455,90.7C480,85,505,139,531,160C555.8,181,581,171,606,181.3C631.6,192,657,224,682,245.3C707.4,267,733,277,758,250.7C783.2,224,808,160,834,112C858.9,64,884,32,909,64C934.7,96,960,192,985,218.7C1010.5,245,1036,203,1061,192C1086.3,181,1112,203,1137,192C1162.1,181,1187,139,1213,138.7C1237.9,139,1263,181,1288,186.7C1313.7,192,1339,160,1364,154.7C1389.5,149,1415,171,1427,181.3L1440,192L1440,320L1427.4,320C1414.7,320,1389,320,1364,320C1338.9,320,1314,320,1288,320C1263.2,320,1238,320,1213,320C1187.4,320,1162,320,1137,320C1111.6,320,1086,320,1061,320C1035.8,320,1011,320,985,320C960,320,935,320,909,320C884.2,320,859,320,834,320C808.4,320,783,320,758,320C732.6,320,707,320,682,320C656.8,320,632,320,606,320C581.1,320,556,320,531,320C505.3,320,480,320,455,320C429.5,320,404,320,379,320C353.7,320,328,320,303,320C277.9,320,253,320,227,320C202.1,320,177,320,152,320C126.3,320,101,320,76,320C50.5,320,25,320,13,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="skills" id="skills">
+      <h3
+        style="text-align: center; color: #dec92e;"
+        class="skill-header" data-aos="flip-right"
+      >
+        WHAT MY WEB DEVELOPMENT SKILLS INCLUDED?
+      </h3>
+      <p style="text-align: center; font-size: 9px; font-style: italic;" class="light-text" data-aos="flip-right">I have intermediate proficiency in utilizing these technologies.</p>
+     
+      <div class="skill">
+        <div class="html hov" data-aos="zoom-in">
+          <img src="html.jpg" alt="html image" />
+          <h1>HTML</h1>
+        </div>
+        <div class="css hov" data-aos="zoom-in">
+          <img src="css.jpg" alt="css image" />
+          <h1>CSS</h1>
+        </div>
+        <div class="scss hov" data-aos="zoom-in">
+          <img src="sass.jpg" alt="sass image" />
+          <h1>SASS</h1>
+        </div>
+        <div class="js hov" data-aos="zoom-in">
+          <img src="javascript.jpg" alt="javasript image" />
+          <h1>JAVASCRIPT</h1>
+        </div>
+        <div class="reactJs hov" data-aos="zoom-in">
+          <img src="react.jpg" alt="react js image" />
+          <h1>REACT</h1>
+        </div>
+        <div class="figma hov" data-aos="zoom-in">
+          <img src="figma.png" alt="figma image" />
+          <h1>FIGMA</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="project" id="project">
+      <h1 style="text-align: center; color: #dec92e" data-aos="fade-up">RECENT WORK</h1>
+      <p style="text-align: center; font-size: 9px; font-style: italic;" class="light-text title"data-aos="fade-up">My second-year college project proposal.</p>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="unix.png" data-aos="flip-left" />
+          </div>
+          <div class="swiper-slide">
+           
+            <img src="space-web.png" data-aos="flip-left" />
+          </div>
+          <div class="swiper-slide">
+            <img src="tripToGuru.png" data-aos="flip-left" />
+          </div>
+          <div class="swiper-slide">
+            <img src="react.jpg" data-aos="flip-left" />
+          </div>
+          <div class="swiper-slide">
+            <img src="figma.png" data-aos="flip-left" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+  <div class="contact" id="contact">
+      
+          <h1  class="get-in-touch" data-aos="zoom-in">CONTACT</h1>
+          <h1 style="text-align: center; color:#f5d900; " class="get-contact"data-aos="zoom-out">GET IN TOUCH</h1>
+     <div class="contact-container">
+        <div class="form" >
+                  <input type="text" placeholder="name" required />
+                  <input type="email" placeholder="email"  required/>
+                  <input type="number" placeholder="phone" required />
+                  <input type="text" placeholder="message" required />
+                  <button>
+             <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                    </svg>
+                  </div>
+              </div>
+                <span>SEND</span>
+              </button>
+        </div>
+          <div class="map-figure" data-aos="fade-up">
+          <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2110,%20Dinalupihan,%20Bataan.&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br></div>
+      </div>
+   </div>
+
+<div class="other-contacts-container">
+    <div class="other-contacts">
+
+      <ul>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          <p style="text-align: center;" class="light-text">Dinalupihan, Bataan Philippines</p>
+        </li>
+        <li class="contact-list-midle"><i class="fa-sharp fa-solid fa-earth-asia"></i>
+          <p class="light-text">dominicpunladomingo120@gmail.com</p>
+        </li>
+        <li><i class="fa-solid fa-phone"></i>
+            <p class="light-text">047-6381-307</p>
+            <p class="light-text">+639-515-938-663</p>
+        </li>
+      </ul>
+    </div></div>
+  
+    <footer>Copyright &copy 2022 All Rights Reserved | Made by Dominic Domingo </footer>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
