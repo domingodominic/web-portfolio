@@ -1367,6 +1367,7 @@ footer {
 //small project section
 .small-project-section {
   padding: 0px 40px;
+  height: 100vh;
 }
 
 .small-project {
@@ -1374,10 +1375,11 @@ footer {
   justify-content: center;
   gap: 1rem;
   text-align: center;
+  margin-top: 2rem;
 
   div {
     height: 250px;
-    border-radius: 1rem;
+    border-radius: 0.2rem;
     transition: all 1.5s;
 
     &:hover,
@@ -1521,7 +1523,7 @@ footer {
   background-image: url("spongebob.png");
   background-size: cover;
   background-position: center;
-  top: 24%;
+  top: 20%;
   left: 0;
 
   z-index: -1;

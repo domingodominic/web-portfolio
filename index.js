@@ -82,6 +82,36 @@ const moon = document
     }
   });
 
+// Observe element start
+const targetElementPrevProject = document.querySelector(
+  ".small-project-section"
+);
+
+function handleContactIntersectionPrevProj(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Change the background color of the contact element
+      targetElementPrevProject.style.backgroundColor = "#2c2c4c"; // Change to your desired color
+      targetElementPrevProject.style.transition = "background-color 3s ease"; // Set the transition
+      // Other styling changes
+    } else {
+      targetElementPrevProject.style.backgroundColor = "white";
+    }
+  });
+}
+
+// Create an observer instance for the contact element
+const contactObserverPrevproj = new IntersectionObserver(
+  handleContactIntersectionPrevProj,
+  {
+    root: null,
+    threshold: 0.5,
+  }
+);
+
+// Start observing the contact element
+contactObserverPrevproj.observe(targetElementPrevProject);
+
 // Observe element
 const targetElement = document.querySelector(".contact");
 
