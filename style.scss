@@ -25,7 +25,7 @@
 }
 nav {
   position: relative;
-
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   width: 100svw;
   display: flex;
   height: 10%;
@@ -332,9 +332,20 @@ body {
 //contacts
 
 .contact {
+  position: relative;
+  overflow: hidden;
   height: 100vh;
   z-index: -2;
   margin-top: 200px;
+
+  img {
+    position: absolute;
+    margin: 0 auto;
+    width: 40%;
+    height: 25%;
+    z-index: 1;
+    display: none;
+  }
 }
 
 .map-figure {
@@ -353,7 +364,6 @@ body {
 .get-in-touch {
   position: relative;
   text-align: center;
-  z-index: -1;
   bottom: -100px;
   font-size: 100px;
   color: #a8a8a8;
@@ -363,20 +373,24 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
   display: grid;
+
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 
   .form {
+    position: relative;
     display: flex;
+    z-index: 1;
     flex-wrap: wrap;
   }
+
   input {
     margin: 0 auto;
     display: flex;
     border: 1px solid #dec92e;
-    margin-top: 25px;
+    margin-top: 23px;
 
     height: 40px;
     width: 350px;
@@ -392,7 +406,14 @@ body {
       background-color: #2c2c4c;
     }
   }
-
+  .sponge--hang {
+    position: relative;
+  }
+  .sponge--hang::before {
+    content: "hello world";
+    color: #f40000;
+    font-size: 50px;
+  }
   button {
     margin: 0 auto;
     margin-top: 40px;
@@ -671,6 +692,19 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .small-project {
+    display: block !important;
+
+    div {
+      height: 250px;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      width: 100%;
+      height: 90%;
+    }
+  }
   .other-contacts {
     width: 100%;
     i {
@@ -734,11 +768,9 @@ footer {
     display: block;
   }
   nav {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     background-color: #dec92e;
     ul {
       background: #dec92e;
-
       position: absolute;
       top: 77px;
       margin-left: 0;
@@ -1237,7 +1269,7 @@ footer {
     font-size: 100px;
   }
   100% {
-    padding-left: 80px;
+    padding-left: 70px;
     font-size: 80px;
     transform: rotateX(360deg);
 
@@ -1261,12 +1293,13 @@ footer {
   }
   50% {
     left: 0px;
-    font-size: 40px;
+    font-size: 60px;
     visibility: visible;
   }
 
   100% {
     transform: translateX(-100px);
+    font-size: 100px;
     visibility: visible;
   }
 }
@@ -1329,4 +1362,167 @@ footer {
   from {
     opacity: 0;
   }
+}
+
+//small project section
+.small-project-section {
+  padding: 0px 40px;
+}
+
+.small-project {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+
+  div {
+    height: 250px;
+    border-radius: 1rem;
+    transition: all 1.5s;
+
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .project--one {
+    position: relative;
+    overflow: hidden;
+    transform-origin: left;
+    background-image: url("space-web.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .github {
+      position: absolute;
+      left: 8%;
+      bottom: -15%;
+
+      i {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+      }
+    }
+    .code {
+      position: absolute;
+      left: 20%;
+      bottom: -14%;
+      i {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+      }
+    }
+    .small--project--title {
+      position: absolute;
+      right: -10%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+
+      color: #ffffff;
+      writing-mode: vertical-rl;
+      bottom: 35%;
+    }
+  }
+}
+
+.project--two {
+  position: relative;
+  overflow: hidden;
+  transform-origin: left;
+  background-image: url("tripToGuru.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .github--two {
+    position: absolute;
+    left: 8%;
+    bottom: -15%;
+
+    i {
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+    }
+  }
+  .code--two {
+    position: absolute;
+    left: 20%;
+    bottom: -14%;
+    i {
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+    }
+  }
+  .small--project--title--two {
+    position: absolute;
+    right: -10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    color: #ffffff;
+    writing-mode: vertical-rl;
+    bottom: 35%;
+  }
+}
+
+//project three
+
+.project--three {
+  position: relative;
+  overflow: hidden;
+  transform-origin: left;
+  background-image: url("unix.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .github--three {
+    position: absolute;
+    left: 8%;
+    bottom: -15%;
+
+    i {
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+    }
+  }
+  .code--three {
+    position: absolute;
+    left: 20%;
+    bottom: -14%;
+    i {
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+    }
+  }
+  .small--project--title--three {
+    position: absolute;
+    right: -10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    color: #ffffff;
+    writing-mode: vertical-rl;
+    bottom: 35%;
+  }
+}
+.icon--slide {
+  transition: all 0.5s;
+  bottom: 5% !important;
+}
+.title--slide {
+  transition: all 0.5s;
+  right: 2% !important;
+}
+//parallax for spongebob
+
+.spongebob--hang {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url("spongebob.png");
+  background-size: cover;
+  background-position: center;
+  top: 24%;
+  left: 0;
+
+  z-index: -1;
 }

@@ -5,7 +5,6 @@ const menus = document.querySelector(".menus");
 
 const menuChildren = menus.children;
 const navigationList = Array.from(document.querySelectorAll(".nav--list"));
-console.log(navigationList);
 const navList = document.querySelector(".menus");
 const moons = document.querySelector(".moons");
 
@@ -82,34 +81,116 @@ const moon = document
       myProfile.src = `my-profile.png`;
     }
   });
-//observe element
+
+// Observe element
 const targetElement = document.querySelector(".contact");
 
-function handleIntersection(entries, observer) {
+function handleContactIntersection(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Change the background color of the background-change-element
-
+      // Change the background color of the contact element
       targetElement.style.backgroundColor = "#2c2c4c"; // Change to your desired color
       targetElement.style.transition = "background-color 3s ease"; // Set the transition
-      title.style.color = "white";
-      // Disconnect the observer since the action is performed
+      // Other styling changes
     } else {
       targetElement.style.backgroundColor = "white";
     }
   });
 }
 
-// Create an observer instance
-const observer = new IntersectionObserver(handleIntersection, {
-  root: null, // Use the viewport as the root
-  threshold: 0.5, // The ratio of the target element's visibility needed to trigger the callback
+// Create an observer instance for the contact element
+const contactObserver = new IntersectionObserver(handleContactIntersection, {
+  root: null,
+  threshold: 0.5,
 });
 
-// Target the target element to be observed
+// Start observing the contact element
+contactObserver.observe(targetElement);
 
-// Start observing the target element
-observer.observe(targetElement);
+// Observe project element project two start
+const targetProjectElementTwo = document.querySelector(".project--two");
+
+function handleProjectIntersectionTwo(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Change the width of the project element
+      targetProjectElementTwo.classList.add("expanding");
+      targetProjectElementTwo.style.width = "100%";
+      targetProjectElementTwo.style.transition = "width ease 1s";
+      // Other styling changes
+    } else {
+      targetProjectElementTwo.style.width = "0%";
+    }
+  });
+}
+
+// Create an observer instance for the project element
+const projectObserverTwo = new IntersectionObserver(
+  handleProjectIntersectionTwo,
+  {
+    root: null,
+    threshold: 0.5,
+  }
+);
+
+// Start observing the project elementtwo
+projectObserverTwo.observe(targetProjectElementTwo);
+//end
+
+// Observe project element
+const targetProjectElement = document.querySelector(".project--one");
+
+function handleProjectIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Change the width of the project element
+      targetProjectElement.classList.add("expanding");
+      targetProjectElement.style.width = "100%";
+      targetProjectElement.style.transition = "width ease 1s";
+      // Other styling changes
+    } else {
+      targetProjectElement.style.width = "0%";
+    }
+  });
+}
+
+// Create an observer instance for the project element
+const projectObserver = new IntersectionObserver(handleProjectIntersection, {
+  root: null,
+  threshold: 0.5,
+});
+
+// Start observing the project element
+projectObserver.observe(targetProjectElement); //end
+
+// Observe project element start
+const targetProjectElementThree = document.querySelector(".project--three");
+
+function handleProjectIntersectionThree(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Change the width of the project element
+      targetProjectElementThree.classList.add("expanding");
+      targetProjectElementThree.style.width = "100%";
+      targetProjectElementThree.style.transition = "width ease 1s";
+      // Other styling changes
+    } else {
+      targetProjectElementThree.style.width = "0%";
+    }
+  });
+}
+
+// Create an observer instance for the project element
+const projectObserverthree = new IntersectionObserver(
+  handleProjectIntersectionThree,
+  {
+    root: null,
+    threshold: 0.5,
+  }
+);
+
+// Start observing the project element
+projectObserverthree.observe(targetProjectElementThree);
 
 //scroll to top function
 const scrollToTopBtn = document.getElementById("scroll-to-top");
@@ -170,3 +251,79 @@ function fadeBody() {
   document.body.classList.add("fade--body");
 }
 setTimeout(fadeBody, 7000);
+
+//paralax of spongebob
+const spongebobHang = document.querySelector(".spongebob--hang");
+const contactSection = document.querySelector(".contact");
+
+window.addEventListener("scroll", () => {
+  const contactRect = contactSection.getBoundingClientRect();
+  const scrollPosition = window.scrollY;
+
+  if (window.matchMedia("(max-width: 500px)").matches) {
+    spongebobHang.style.width = "100px";
+    spongebobHang.style.height = "100px";
+  }
+
+  if (contactRect.top <= window.innerHeight && contactRect.bottom >= 0) {
+    const parallaxValue = scrollPosition / 7 - 400;
+    const parallaxValueX = scrollPosition / 10 - 200;
+    spongebobHang.style.transform = `translateX(${parallaxValue}px)`;
+    // spongebobHang.style.transform = `translateY(${parallaxValueX}px)`;
+  }
+});
+
+//show icon
+
+const projectOne = document.querySelector(".project--one");
+const projectTitle = document.querySelector(".small--project--title");
+const gitIcon = document.querySelector(".github");
+const codeIcon = document.querySelector(".code");
+
+projectOne.addEventListener("mouseover", () => {
+  gitIcon.classList.add("icon--slide");
+  codeIcon.classList.add("icon--slide");
+  projectTitle.classList.add("title--slide");
+});
+
+projectOne.addEventListener("mouseout", () => {
+  gitIcon.classList.remove("icon--slide");
+  projectTitle.classList.remove("title--slide");
+  codeIcon.classList.remove("icon--slide");
+});
+
+const projecttwo = document.querySelector(".project--two");
+const projectTitleTwo = document.querySelector(".small--project--title--two");
+const gitIconTwo = document.querySelector(".github--two");
+const codeIconTwo = document.querySelector(".code--two");
+
+projecttwo.addEventListener("mouseover", () => {
+  gitIconTwo.classList.add("icon--slide");
+  codeIconTwo.classList.add("icon--slide");
+  projectTitleTwo.classList.add("title--slide");
+});
+
+projecttwo.addEventListener("mouseout", () => {
+  gitIconTwo.classList.remove("icon--slide");
+  projectTitleTwo.classList.remove("title--slide");
+  codeIconTwo.classList.remove("icon--slide");
+});
+
+const projectthree = document.querySelector(".project--three");
+const projectTitlethree = document.querySelector(
+  ".small--project--title--three"
+);
+const gitIconthree = document.querySelector(".github--three");
+const codeIconthree = document.querySelector(".code--three");
+
+projectthree.addEventListener("mouseover", () => {
+  gitIconthree.classList.add("icon--slide");
+  codeIconthree.classList.add("icon--slide");
+  projectTitlethree.classList.add("title--slide");
+});
+
+projectthree.addEventListener("mouseout", () => {
+  gitIconthree.classList.remove("icon--slide");
+  projectTitlethree.classList.remove("title--slide");
+  codeIconthree.classList.remove("icon--slide");
+});
